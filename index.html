@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="./asset/img/hand-point-right-regular.svg ">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="asset/style.css">
+
+    <link rel="stylesheet"Xes href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <!-- vue js -->
+    <script src="https://unpkg.com/vue@next"></script>
+
+    <title>Jrxvapeshop21</title>
+  </head>
+  <body id="page-top">
+  <div id="app">
+      <nav class="navbar navbar-expand-lg navbar-dark  bg-transparent fixed-top">
+        <div class="container col-md-9">
+        <a class="navbar-brand" href="#page-top">Jrx<br>Vapeshop</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link js-scroll-trigger text-dark" href="#">HOME <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link js-scroll-trigger text-dark" href="#product">PRODUCT <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                  <a class="nav-link js-scroll-trigger text-dark" href="#kontak">KONTAK PERSON <span class="sr-only">(current)</span></a>
+              </li>
+              <li>
+                <button type="button" class="btn btn-dark">
+                  <i class="far fa-shopping-cart"></i>
+                  <span class="badge badge-dark">{{cart}}</span>
+                  <span class="sr-only">unread messages</span>
+                </button>
+              </li>
+          </ul>
+        </div>
+      </div>
+      </nav>
+
+    <!-- banner -->
+      <div class="banner w-100 vh-100 d-flex justify-conten-center align-items-center">
+          <div class="container col-md-9 text-left">
+            <h1 class="display-4 fw-bold">Lengkapi Kebutuhan <br> Vape Anda di sini</h1>
+            <h2 class="class-lead display-3">Murah Meriah bosku</h2>
+            <a href="Order">
+            </a>
+          </div>
+      </div>
+    <!-- end of banner -->
+
+    <!-- content -->
+      <div class="container-fliud pt-5 pb-5 bgcolour">
+        <div class="container col-md-9 text-center fs-3 fd-bold">
+          <h3 id="product">PRODUCT</h3>
+          <div class="card-deck">
+            <div class="card">
+              <img class="card-img-top" src="asset/img/hexohm v3 3.0.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">MOD</h5>
+                  <p class="card-title">hexoam <br> Rp 2.500.000</p>
+                </div>
+                <button class="btn btn-transparent btn-md text-dark" @click="orderToCart" type="button">Order</button>
+                <button class="btn btn-transparent btn-md text-dark" @click="unorderToCart" type="button">UnOrder</button>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="asset/img/rdahaku.jpg" alt="Card image cap">
+                <div class="card-body">
+                      <h5 class="card-title">RDA</h5>
+                      <p class="card-title">Haku Venna <br> Rp 1.500.000</p>
+                  </div>
+                <button class="btn btn-transparent btn-md text-dark" @click="orderToCart" type="button">Order</button>
+                <button class="btn btn-transparent btn-md text-dark" @click="unorderToCart" type="button">UnOrder</button>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="asset/img/aegishero.jpg" alt="Card image cap">
+                  <div class="card-body">
+                      <h5 class="card-title">POD</h5>
+                      <p class="card-text">Aegis Hero <br> Rp 400.000 </p>
+                  </div>
+                <button class="btn btn-transparent btn-md text-dark" @click="orderToCart" type="button">Order</button>
+                <button class="btn btn-transparent btn-md text-dark" @click="unorderToCart" type="button">UnOrder</button>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="asset/img/liquidreza.jpg" alt="Card image cap">
+                  <div class="card-body">
+                      <h5 class="card-title">LIQUID</h5>
+                      <p class="card-title">Muffin&Xes <br> Rp 150.000</p>
+                  </div>
+                <button class="btn btn-transparent btn-md text-dark" @click="orderToCart" type="button">Order</button>
+                <button class="btn btn-transparent btn-md text-dark" @click="unorderToCart" type="button">UnOrder</button>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="asset/img/kapascotton.jfif" alt="Card image cap">
+                  <div class="card-body">
+                      <h5 class="card-title">KAPAS</h5>
+                      <p class="card-text">Cotton Bacon <br> 100.000 </p>
+                  </div>
+                <button class="btn btn-transparent btn-md text-dark" @click="orderToCart" type="button">Order</button>
+                <button class="btn btn-transparent btn-md text-dark" @click="unorderToCart" type="button">UnOrder</button>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="asset/img/coilalien.jfif" alt="Card image cap">
+                <div class="card-body">
+                      <h5 class="card-title">COIL</h5>
+                      <p class="card-text">Alien <br> Rp 80.000</p>
+                  </div>
+                <button class="btn btn-transparent btn-md text-dark" @click="orderToCart" type="button">Order</button>
+                <button class="btn btn-transparent btn-md text-dark" @click="unorderToCart" type="button">UnOrder</button>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="asset/img/coilpodaegishero.jfif" alt="Card image cap">
+                  <div class="card-body">
+                      <h5 class="card-title">COIL</h5>
+                      <p class="card-text">POD Aegis Hero <br> Rp 50.000 <br> /1pcs</p>
+                  </div>
+                <button class="btn btn-transparent btn-md text-dark" @click="orderToCart" type="button">Order</button>
+                <button class="btn btn-transparent btn-md text-dark" @click="unorderToCart" type="button">UnOrder</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!--end of content -->
+
+    <!-- footer -->
+    <div class="container-fliud pt-5 pb-5 bgcustom">
+        <div class="container col-md-9 fd-bold ">
+          <p class="display-4 text-center" id="kontak">Kontak Person</p>
+          <h5 class="text-center">&copy; 2021 Eka Putra</h5>
+            <div class="row">
+              <div class="col-md-6">
+                <img class="img-fluid ps-3 rounded ml-auto d-block" src="asset/img/profile.png" alt="logo" width="160" height="160">
+              </div>
+              <div class="col pt-2">
+                <ul class="list-unstyled text-color1 footer-link-list fs-5">
+                    <li class="pt-2">
+                        <i class="fab fa-instagram fs-3"></i>
+                        <a class="text-decoration-none text-color1" href="Instagram:Jrx_Vape">Jrx_Vape</a>
+                    </li>
+                    <li class="pt-2">
+                      <i class="fab fa-facebook-square fs-3"></i>
+                      <a class="text-decoration-none text-color1" href="Facebook:Jrx_vape_Shop">Jrx_vape_Shop</a>
+                    </li>
+                    <li class="pt-2">
+                        <i class="fab fa-whatsapp-square fs-3"></i>
+                        <a class="text-decoration-none text-color1" href="tel:0895355722540">0895355722540</a>
+                    </li>
+                    <li class="pt-2">
+                        <i class="fas fa-envelope-square fs-3"></i>
+                        <a class="text-decoration-none text-color1" href="mailto:jrxvapeshop21@gmail.com">jrxvapeshop21@gmail.com</a>
+                    </li>
+                </ul>
+              </div>
+            </div>
+        </div>  
+    </div>
+    <!-- end of footer-->
+  </div>
+      
+  <!-- import main.js -->
+  <script src="main.js"></script>
+
+  <!-- mount app -->
+  <script>
+      const mountedApp = app.mount('#app')
+  </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

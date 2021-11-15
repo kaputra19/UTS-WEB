@@ -1,0 +1,28 @@
+.banner {
+    background-image: url(img/banner-01.png);
+    background-size: cover;
+    height: 800px;
+    text-align:end;
+}
+
+.banner .display-4 {
+     color:ghostwhite;
+     margin-top: 550px;
+}
+
+.banner .display-3{
+    color:ghostwhite;
+    font-size:larger;
+}
+
+.container h3 {
+    color:black;
+}
+
+.bgcolour {
+    background-color:#F2CFCB !important;
+}
+
+.bgcustom {
+    background-color:thistle !important;
+}
